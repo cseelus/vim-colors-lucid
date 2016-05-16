@@ -2,45 +2,46 @@
 " ----------------------------------------------------------------------
 " Created by Chris Seelus (@cseelus)
 "
-:let _rock_dark   = '#101010'
-:let _rock        = '#2c2d2e'
+:let _rock_dark   = '#131313'
+:let _rock        = '#191919'
+:let _rock_medium = '#363636'
 :let _gray_dark   = '#535557'
 :let _gray        = '#767b86'
 :let _gray_medium = '#cec5ce'
 :let _gray_light  = '#d2d3d3'
 :let _cloud       = '#e6e7e7'
 " --------------------------
-:let _turquoise   = '#4bd9a0'
-:let _fluoric     = '#c1ffc6'
+:let _turquoise   = '#50e4b7'
+:let _fluoric     = '#d0ffc3'
 :let _cyan        = '#99feff'
 :let _steel       = '#94a2da'
 :let _powder      = '#8fc7db'
 :let _sky         = '#b3e4eb'
-:let _wine        = '#c6006a'
+:let _wine        = '#d50e87'
 :let _sap         = '#fde9a2'
 
 " Strange color issue for MacVim; Colors too saturated + wrong hue
 if has("gui_macvim")
-  :let _rock_dark = '#0f0e0f'
   :let _steel    = '#83a8d1'
 endif
 
 " Light/inverted colors (darkrock-cloud, rock-lightgrey switched)
 if &background == "light"
-  :let _rock_dark  = '#fcfdfd'
-  :let _rock       = '#dfe0e0'
-  :let _gray_dark  = '#a9aeb3'
-  :let _gray       = '#82868a'
-  :let _gray_light = '#2c2d2e'
-  :let _cloud      = '#101010'
+  :let _rock_dark   = '#f3f4f4'
+  :let _rock        = '#dfe0e0'
+  :let _gray_dark   = '#a9aeb3'
+  :let _gray        = '#82868a'
+  :let _gray_medium = '#bcbfc0'
+  :let _gray_light  = '#2c2d2e'
+  :let _cloud       = '#101010'
   " --------------------------
-  :let _turquoise   = '#1b9956'
-  :let _fluoric     = '#628a64'
+  :let _turquoise   = '#34b56e'
+  :let _fluoric     = '#71984f'
   :let _cyan        = '#34b9b9'
   :let _steel       = '#1b009a'
   :let _powder      = '#3b7e9a'
   :let _sky         = '#2e8f9f'
-  :let _wine        = '#a1004d'
+  :let _wine        = '#c6006a'
   :let _sap         = '#fde9a2'
 endif
 
@@ -68,10 +69,13 @@ let colorgroup['Directory']    = {"GUIFG": _fluoric,   "GUIBG":  _rock_dark}
 let colorgroup['Error']        = {"GUIFG": _rock_dark, "GUIBG":  _wine}
 let colorgroup['FoldColumn']   = {                     "GUIBG":  _rock_dark}
 let colorgroup['Folded']       = {"GUIFG": _cloud,     "GUIBG":  _rock}
-let colorgroup['LineNr']       = {"GUIFG": _gray_dark, "GUIBG":  _rock_dark}
+let colorgroup['LineNr']       = {"GUIFG": _rock_medium,"GUIBG":  _rock_dark}
+if &background == "light"
+  let colorgroup['LineNr']       = {"GUIFG": _gray_medium, "GUIBG":  _rock_dark}
+endif
 let colorgroup['MatchParen']   = {"GUIFG": _rock_dark, "GUIBG":  _powder}
 let colorgroup['ModeMsg']      = {"GUIFG": _rock_dark, "GUIBG":  _fluoric}
-let colorgroup['Pmenu']        = {"GUIFG": _cloud,     "GUIBG":  _rock}
+let colorgroup['Pmenu']        = {"GUIFG": _cloud,     "GUIBG":  _rock_medium}
 let colorgroup['PmenuSel']     = {"GUIFG": _rock_dark, "GUIBG":  _fluoric}
 let colorgroup['PmenuSbar']    = {                     "GUIBG":  _rock_dark}
 let colorgroup['Search']       = {                     "GUIBG":  _gray_dark, "GUI": "underline"}
@@ -89,7 +93,7 @@ let colorgroup['WarningMsg']   = {"GUIFG": _rock_dark, "GUIBG":  _steel}
 
 " Syntax
 " ----------------------------------------------------------------------
-let colorgroup['Access']       = {"GUIFG": _fluoric,   "GUI": "bold"}
+let colorgroup['Access']       = {"GUIFG": _turquoise, "GUI": "bold"}
 let colorgroup['Comment']      = {"GUIFG": _gray,      "GUI": "italic"}
 let colorgroup['Conditional']  = {"GUIFG": _cyan}
 let colorgroup['Constant']     = {"GUIFG": _turquoise}
@@ -99,8 +103,8 @@ let colorgroup['Identifier']   = {"GUIFG": _sky}
 let colorgroup['NonText']      = {"GUIFG": _rock}
 let colorgroup['Number']       = {"GUIFG": _turquoise}
 let colorgroup['PreProc']      = {"GUIFG": _wine}
-let colorgroup['Statement']    = {"GUIFG": _wine}
-let colorgroup['Special']      = {"GUIFG": _sap}
+let colorgroup['Statement']    = {"GUIFG": _turquoise}
+let colorgroup['Special']      = {"GUIFG": _wine}
 let colorgroup['SpecialKey']   = {"GUIFG": _gray_light}
 let colorgroup['String']       = {"GUIFG": _fluoric}
 let colorgroup['StorageClass'] = {"GUIFG": _cloud,     "GUI": "bold"}
@@ -113,7 +117,7 @@ hi link Boolean               Number
 hi link Character             Function
 hi link ErrorMsg              Function
 hi link Debug                 Special
-hi link Define                Statement
+hi link Define                PreProc
 hi link Exception             PreProc
 hi link Float                 Number
 hi link Include               Function
