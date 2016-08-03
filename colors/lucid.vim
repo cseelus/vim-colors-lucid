@@ -57,10 +57,13 @@ if &background == "light"
 endif
 
 
-hi clear
+set background=dark
+highlight clear
+
 if exists("syntax_on")
   syntax reset
 endif
+
 set t_Co=256
 let colors_name = "lucid"
 let colorgroup = {}
