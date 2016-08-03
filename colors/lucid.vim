@@ -218,6 +218,7 @@ hi link javascriptEndcolons   Function
 
 " JSON
 hi link jsonKeyword           Function
+
 " LaTeX
 hi link texInputFile          PreProc
 

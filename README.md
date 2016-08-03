@@ -1,8 +1,10 @@
 # Vim color scheme Lucid
 
-A color scheme for VIM with vivid highlights and clear colors.
+A color scheme for VIM with vivid highlights and friendly, clear colors.
 
-Please use some plugin like [CSApprox](http://www.vim.org/scripts/script.php?script_id=2390) to make this work smoothly in 256 colors or even 88 colors terminals.
+
+![Lucid preview](https://raw.github.com/cseelus/vim-colors-lucid/master/vim-colors-lucid_rails_preview.png)  
+*Screenshot with some Ruby on Rails sample code and the Menlo font*
 
 ## Highlightings for these plugins
 
@@ -17,10 +19,11 @@ Please use some plugin like [CSApprox](http://www.vim.org/scripts/script.php?scr
 - Apache Config
 - CoffeeScript
 - CSS
-- JavaScript
 - Haml
 - HTML
+- JavaScript
 - LaTeX
+- Markdown
 - PHP
 - Ruby
 - Sass
@@ -28,3 +31,7 @@ Please use some plugin like [CSApprox](http://www.vim.org/scripts/script.php?scr
 - VimL
 - YAML
 - XML
+
+## Older Terminals
+
+You can use some plugin like [CSApprox](http://www.vim.org/scripts/script.php?script_id=2390) to make this work smoothly in older 256 colors or even 88 colors terminals.
