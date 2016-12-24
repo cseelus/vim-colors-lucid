@@ -32,6 +32,7 @@
 :let _cyan        = '#99feff'
 :let _steel       = '#83a8d1'
 :let _powder      = '#8fc7db'
+:let _purple      = '#7470ce'
 :let _sky         = '#b3e4eb'
 :let _pink        = '#d50e87'
 :let _sap         = '#fde9a2'
@@ -76,11 +77,12 @@ let colorgroup['Normal']       = {"GUIFG": _cloud,     "GUIBG":  _rock_dark}
 let colorgroup['Darker']       = {"GUIFG": _gray,      "GUIBG":  _rock_dark}
 let colorgroup['ColorColumn']  = {"GUIFG": _rock_dark, "GUIBG":  _pink}
 let colorgroup['Conceal']      = {"GUIFG": _cloud,     "GUIBG":  _powder}
-let colorgroup['Cursor']       = {"GUIFG": _rock_dark, "GUIBG":  _turquoise}
+" let colorgroup['Cursor']       = {"GUIFG": _rock_dark, "GUIBG":  _turquoise}
 let colorgroup['CursorLine']   = {"GUIFG": _cloud,     "GUIBG":  _rock}
 let colorgroup['CursorLineNr'] = {"GUIFG": _gray_dark, "GUIBG":  _rock_dark}
 let colorgroup['Directory']    = {"GUIFG": _fluoric,   "GUIBG":  _rock_dark}
 let colorgroup['Error']        = {"GUIFG": _rock_dark, "GUIBG":  _pink}
+let colorgroup['ErrorMsg']        = {"GUIFG": _rock_dark, "GUIBG":  _pink}
 let colorgroup['FoldColumn']   = {                     "GUIBG":  _rock_dark}
 let colorgroup['Folded']       = {"GUIFG": _cloud,     "GUIBG":  _rock}
 let colorgroup['LineNr']       = {"GUIFG": _gray_dark, "GUIBG":  _rock_dark}
@@ -101,20 +103,22 @@ let colorgroup['Todo']         = {"GUIFG": _rock_dark, "GUIBG":  _powder}
 let colorgroup['VertSplit']    = {"GUIFG": _rock,      "GUIBG":  _rock}
 let colorgroup['Visual']       = {"GUIFG": _rock_dark, "GUIBG":  _sap}
 if &background == "light"
-  let colorgroup['Visual']       = {"GUIFG": _cloud, "GUIBG":  _sap}
+  let colorgroup['Visual']       = {"GUIFG": _cloud,     "GUIBG":  _sap}
 endif
 let colorgroup['WarningMsg']   = {"GUIFG": _rock_dark, "GUIBG":  _steel}
 
 
 " Syntax
 " ----------------------------------------------------------------------
-let colorgroup['Access']       = {"GUIFG": _turquoise, "GUI": "italic"}
+let colorgroup['Access']       = {"GUIFG": _purple,    "GUI": "bold"}
 let colorgroup['Comment']      = {"GUIFG": _gray,      "GUI": "italic"}
+let colorgroup['Class']        = {"GUIFG": _pink,      "GUI": "italic"}
 let colorgroup['Conditional']  = {"GUIFG": _cyan}
 let colorgroup['Constant']     = {"GUIFG": _turquoise}
 let colorgroup['Delimiter']    = {"GUIFG": _pink}
 let colorgroup['Function']     = {"GUIFG": _steel}
 let colorgroup['Identifier']   = {"GUIFG": _sky}
+let colorgroup['Module']       = {"GUIFG": _pink,      "GUI": "underline"}
 let colorgroup['NonText']      = {"GUIFG": _gray_dark}
 let colorgroup['Number']       = {"GUIFG": _turquoise}
 let colorgroup['PreProc']      = {"GUIFG": _pink}
@@ -130,7 +134,7 @@ let colorgroup['Underlined']   = {"GUIFG": _turquoise, "GUI": "underline"}
 " ------------------------
 hi link Boolean               Number
 hi link Character             Function
-hi link ErrorMsg              Function
+hi link ErrorMsg              Error
 hi link Debug                 Special
 hi link Define                PreProc
 hi link Exception             PreProc
@@ -219,6 +223,15 @@ hi link javascriptOpSymbols   Type
 hi link javascriptParens      Function
 hi link javascriptEndcolons   Function
 
+" Javascript (pangloss/vim-javascript)
+hi link jsBraces              Delimiter
+hi link jsClassDefinition     Constant
+hi link jsClassKeyword        PreProc
+hi link jsExtendsKeyword      Function
+hi link jsFuncCall            Function
+hi link jsModuleKeyword       Identifier
+hi link jsObjectKey           Identifier
+
 " JSON
 hi link jsonKeyword           Function
 
@@ -226,6 +239,7 @@ hi link jsonKeyword           Function
 hi link texInputFile          PreProc
 
 " Markdown
+hi link mkdBlockquote         Symbol
 hi link mkdCode               Identifier
 hi link mkdIndentCode         Identifier
 
@@ -236,11 +250,13 @@ hi link phpVarSelector        Identifier
 
 " Ruby
 hi link rubyAccess            Access
+hi link rubyClass             Class
 hi link rubyControl           Function
 hi link rubyConstant          Constant
 hi link rubyFunction          StorageClass
 hi link rubyInclude           Include
 hi link rubyInterpolation     Include
+hi link rubyModule            Module
 " hi link RubyPseudoVariable    Type
 hi link rubySymbol            Symbol
 
