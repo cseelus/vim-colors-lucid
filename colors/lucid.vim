@@ -34,7 +34,7 @@
 :let _powder      = '#8fc7db'
 :let _purple      = '#7470ce'
 :let _sky         = '#b3e4eb'
-:let _pink        = '#d50e87'
+:let _pink        = '#db0088'
 :let _sap         = '#fde9a2'
 
 " Light/inverted colors (darkrock-cloud, rock-lightgrey switched)
@@ -208,12 +208,6 @@ hi link cssSelectorOp         StorageClass
 " HAML
 hi link hamlTag               Function
 
-" HTML
-hi link htmlArg               Symbol
-hi link htmlTag               Function
-hi link htmlTagName           Constant
-hi link htmlEndTag            Function
-
 " JavaScript
 hi link javascriptFuncArg     Function
 hi link javascriptFuncComma   Function
@@ -230,6 +224,7 @@ hi link jsClassKeyword        PreProc
 hi link jsExtendsKeyword      Function
 hi link jsFuncCall            Function
 hi link jsModuleKeyword       Identifier
+hi link jsNull                Identifier
 hi link jsObjectKey           Identifier
 
 " JSON
@@ -266,13 +261,6 @@ hi link sassClassChar         Type
 " " hi link sassMixing            Symbol
 hi link sassIdChar            Identifier
 " hi link sassVariable          Function
-
-" Slim
-hi link slimDocType           Function
-hi link slimDocTypeKeyword    Statement
-hi link slimRubyChar          PreProc
-hi link slimRubyOutputChar    PreProc
-hi link slimText              Normal
 
 " VimL
 hi link vimCmdSep             Function
