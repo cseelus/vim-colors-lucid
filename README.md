@@ -4,7 +4,7 @@ A color scheme for VIM with vivid highlights and friendly, clear colors.
 
 
 ![Lucid preview](https://raw.github.com/cseelus/vim-colors-lucid/master/vim-colors-lucid_rails_preview.png)  
-*Screenshot with some Ruby on Rails sample code and the Menlo font*
+*Screenshot with some Ruby sample code and the Menlo font*
 
 ## Highlightings for these plugins
 
@@ -13,6 +13,7 @@ A color scheme for VIM with vivid highlights and friendly, clear colors.
 - NERDTree
 - PlainTasks (.todo)
 - Startify
+- VIM-JavaScript (pangloss)
 
 ## Syntax highlighting adjustments for
 
@@ -20,14 +21,12 @@ A color scheme for VIM with vivid highlights and friendly, clear colors.
 - CoffeeScript
 - CSS
 - Haml
-- HTML
 - JavaScript
 - LaTeX
 - Markdown
 - PHP
 - Ruby
 - Sass
-- Slim
 - VimL
 - YAML
 - XML
