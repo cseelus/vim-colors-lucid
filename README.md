@@ -21,12 +21,14 @@ A color scheme for VIM with vivid highlights and friendly, clear colors.
 - CoffeeScript
 - CSS
 - Haml
+- HTML
 - JavaScript
 - LaTeX
 - Markdown
 - PHP
 - Ruby
 - Sass
+- Slim
 - VimL
 - YAML
 - XML

@@ -208,6 +208,12 @@ hi link cssSelectorOp         StorageClass
 " HAML
 hi link hamlTag               Function
 
+" HTML
+hi link htmlArg               Symbol
+hi link htmlTag               Function
+hi link htmlTagName           Constant
+hi link htmlEndTag            Function
+
 " JavaScript
 hi link javascriptFuncArg     Function
 hi link javascriptFuncComma   Function
@@ -261,6 +267,13 @@ hi link sassClassChar         Type
 " " hi link sassMixing            Symbol
 hi link sassIdChar            Identifier
 " hi link sassVariable          Function
+
+" Slim
+hi link slimDocType           Function
+hi link slimDocTypeKeyword    Statement
+hi link slimRubyChar          PreProc
+hi link slimRubyOutputChar    PreProc
+hi link slimText              Normal
 
 " VimL
 hi link vimCmdSep             Function
