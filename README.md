@@ -21,6 +21,7 @@ A color scheme for VIM with vivid highlights and friendly, clear colors.
 - pangloss/vim-javascript
 - PlainTasks (.todo)
 - Startify
+- VIM-JavaScript (pangloss)
 
 ## Syntax highlighting adjustments for
 

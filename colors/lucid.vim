@@ -43,7 +43,7 @@
 :let _powder      = '#8fc7db'
 :let _purple      = '#7470ce'
 :let _sky         = '#b3e4eb'
-:let _pink        = '#d50e87'
+:let _pink        = '#db0088'
 :let _sap         = '#fde9a2'
 
 " Light/inverted colors (darkrock-cloud, rock-lightgrey switched)
