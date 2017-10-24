@@ -297,6 +297,7 @@ hi link rubyInterpolation     Include
 hi link rubyMacro             Function
 hi link rubyModule            Module
 " hi link RubyPseudoVariable    Type
+hi link rubyStringDelimiter   rubyString
 hi link rubySymbol            Symbol
 
 " SASS
