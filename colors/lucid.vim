@@ -263,6 +263,7 @@ hi link texInputFile          Symbol
 hi link texInputFileOpt       String
 hi link texMathMatcher        Statement
 hi link texMathSymbol         Symbol
+hi link texMathZoneA          Symbol
 hi link texMathZoneAS         Symbol
 hi link texSection            Title
 hi link texStatement          Function
